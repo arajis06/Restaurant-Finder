@@ -33,3 +33,18 @@ $("button").on("click", function(event) {
 // URL and key for Zomato API
 // !!!!! URL may need changed to match search criteria
 // var queryURLzomato = "https://ZomatoraygorodskijV1.p.rapidapi.com/getCuisinesByCoordinates&api_key=ae4575e5962528d6786d05daee388045";
+
+
+// if anyone needs access to the firebase account the email is "acnproject01@gmail.com" pw: gitcheckout01
+// made that gmail for this project 
+var firebaseConfig = {
+    apiKey: "AIzaSyCF_6CAISGlBiTGlO0_YDuZ8gM9-4yRoeo",
+    authDomain: "acn-bootcamp-project-01.firebaseapp.com",
+    databaseURL: "https://acn-bootcamp-project-01.firebaseio.com",
+    projectId: "acn-bootcamp-project-01",
+    storageBucket: "acn-bootcamp-project-01.appspot.com",
+    messagingSenderId: "532356596825",
+    appId: "1:532356596825:web:87d4b837e270adec"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
