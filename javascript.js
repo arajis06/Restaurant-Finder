@@ -44,7 +44,7 @@ $("button").on("click", function(event) {
 
 
     // CURRENTLY IS NOT WORKING
-    for (var i = 0; i < results2; i++) {
+    for (var i = 0; i < results2.length; i++) {
         console.log(results2.restaurant.name)
     }
     })
