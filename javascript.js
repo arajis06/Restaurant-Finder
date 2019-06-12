@@ -21,14 +21,14 @@ $("button").on("click", function(event) {
 
     // storing the data from the AJAX request in the results variable
     var results = response.Response.View[0].Result[0].Location.NavigationPosition[0]
-    console.log(results)
+    console.log(results.Latitude)
+    console.log(results.Longitude)
+
     
-
-
 
     // URL and key for Zomato API
     // !!!!! URL may need changed to match search criteria
-    var queryURLzomato = "https://developers.zomato.com/api/v2.1/geocode?lat=40.43851&lon=-79.99734&apikey=ae4575e5962528d6786d05daee388045"
+    var queryURLzomato = "https://developers.zomato.com/api/v2.1/geocode?lat=" + results.Latitude + "&lon=" + results.Longitude + "&apikey=ae4575e5962528d6786d05daee388045"
     ;
 
     $.ajax({
@@ -41,7 +41,21 @@ $("button").on("click", function(event) {
 
     var results2 = response2.nearby_restaurants
     console.log(results2)
+
+
+    // CURRENTLY IS NOT WORKING
+    for (var i = 0; i < results2; i++) {
+        console.log(results2.restaurant.name)
+    }
     })
+
+    // RESULTS TO BE DISPLAYED
+    // results2.name
+    // results2.location.address
+    // results2.cuisines
+    // results2.menu_url
+    // results2.url
+    // results2.user_rating.aggregate_rating
 })
 })
 
