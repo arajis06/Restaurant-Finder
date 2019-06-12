@@ -8,28 +8,54 @@ $("button").on("click", function(event) {
     // APP ID: G7xVIDYXhT4pqjxrcBFy 
     // APP CODE: CrOqGzcuG4spwb1SS7-YVQ
     var queryURLgeo = "https://geocoder.api.here.com/6.2/geocode.json?app_id=G7xVIDYXhT4pqjxrcBFy&app_code=CrOqGzcuG4spwb1SS7-YVQ&searchtext=" + location;
-    
-    // "http://open.mapquestapi.com/geocoding/v1/address?app_id=G7xVIDYXhT4pqjxrcBFy&app_code=CrOqGzcuG4spwb1SS7-YVQ&location=" + location;
 
 
     $.ajax({
         url: queryURLgeo,
         method: "GET"
     })
-        // After data comes back from the request
-        .then(function(response) {
-        console.log(queryURLgeo);
-        console.log(response);
+    // After data comes back from the request
+    .then(function(response) {
+    console.log(queryURLgeo);
+    console.log(response);
 
-        // storing the data from the AJAX request in the results variable
-        var results = response.Response.View[0].Result[0].Location.NavigationPosition[0]
-        console.log(results)
+    // storing the data from the AJAX request in the results variable
+    var results = response.Response.View[0].Result[0].Location.NavigationPosition[0]
+    console.log(results)
+    
 
-        })
 
+
+    // URL and key for Zomato API
+    // !!!!! URL may need changed to match search criteria
+    var queryURLzomato = "https://developers.zomato.com/api/v2.1/geocode?lat=40.43851&lon=-79.99734&apikey=ae4575e5962528d6786d05daee388045"
+    ;
+
+    $.ajax({
+        url: queryURLzomato,
+        method: "GET"
     })
+    // After data comes back from the request
+    .then(function(response2) {
+    console.log(response2);
 
+    var results2 = response2.nearby_restaurants
+    console.log(results2)
+    })
+})
+})
 
-// URL and key for Zomato API
-// !!!!! URL may need changed to match search criteria
-// var queryURLzomato = "https://ZomatoraygorodskijV1.p.rapidapi.com/getCuisinesByCoordinates&api_key=ae4575e5962528d6786d05daee388045";
+// if anyone needs access to the firebase account the email is "acnproject01@gmail.com" pw: gitcheckout01
+// made that gmail for this project 
+var firebaseConfig = {
+    apiKey: "AIzaSyCF_6CAISGlBiTGlO0_YDuZ8gM9-4yRoeo",
+    authDomain: "acn-bootcamp-project-01.firebaseapp.com",
+    databaseURL: "https://acn-bootcamp-project-01.firebaseio.com",
+    projectId: "acn-bootcamp-project-01",
+    storageBucket: "acn-bootcamp-project-01.appspot.com",
+    messagingSenderId: "532356596825",
+    appId: "1:532356596825:web:87d4b837e270adec"
+};
+
+  // Initialize Firebase
+//   firebase.initializeApp(firebaseConfig);
