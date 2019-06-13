@@ -58,6 +58,7 @@ $("button").on("click", function(event) {
             console.log(results2[i].restaurant.user_rating.aggregate_rating)
             $("#rating").append(results2[i].restaurant.user_rating.aggregate_rating)
         }
+
     })
 })
 })
@@ -74,5 +75,4 @@ var firebaseConfig = {
     appId: "1:532356596825:web:87d4b837e270adec"
 };
 
-  // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig);
+
