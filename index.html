@@ -5,30 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <!-- Bootstrap -->
-    <link rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
+    <div class="jumbotron">
+        <h1 class="aligncenter">Title here!</h1>
+    </div>
 
     <form>
         <div class="form-group">
-          <label for="location">Location</label>
-          <input type="text" class="form-control" id="data-location">
+            <label for="location">Location</label>
+            <input type="text" class="form-control" id="data-location">
+            
+            
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div id="name"></div>
+                <div id="address"></div>
+                <div id="cuisines"></div>
+                <div id="menu-url"></div>
+                <div id="restaurant-url"></div>
+                <div id="rating"></div>
+            </div>
+            <div class="col-lg-6">
+                <div id="recent"></div>
+            </div>
+        </div>
+    
+
         
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    </div>
 
-
-
-
-<!-- jQuery -->
+    
+    
+    
+    
+ <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
-<!-- Javascript link -->
-<script src="javascript.js"></script>
+    <!-- Javascript link -->
+    <script src="javascript.js"></script>
+    
+
 </body>
 </html>
