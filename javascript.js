@@ -44,18 +44,21 @@ $("button").on("click", function(event) {
 
 
     // CURRENTLY IS NOT WORKING
-    for (var i = 0; i < results2; i++) {
-        console.log(results2.restaurant.name)
-    }
+        for (var i = 0; i < results2.length; i++) {
+            console.log(results2[i].restaurant.name)
+            $("#name").append(results2[i].restaurant.name)
+            console.log(results2[i].restaurant.location.address)
+            $("#address").append(results2[i].restaurant.location.address)
+            console.log(results2[i].restaurant.cuisines)
+            $("#cuisines").append(results2[i].restaurant.cuisines)
+            console.log(results2[i].restaurant.menu_url)
+            $("#menu-url").append(results2[i].restaurant.menu_url)
+            console.log(results2[i].restaurant.url)
+            $("#restaurant-url").append(results2[i].restaurant.url)
+            console.log(results2[i].restaurant.user_rating.aggregate_rating)
+            $("#rating").append(results2[i].restaurant.user_rating.aggregate_rating)
+        }
     })
-
-    // RESULTS TO BE DISPLAYED
-    // results2.name
-    // results2.location.address
-    // results2.cuisines
-    // results2.menu_url
-    // results2.url
-    // results2.user_rating.aggregate_rating
 })
 })
 
