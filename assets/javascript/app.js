@@ -31,7 +31,8 @@ $("button").on("click", function(event) {
 });
 
   // Firebase watcher + initial loader HINT: .on("value")
-  database.ref().on("child_added", function(childSnapshot) {
+  //database.ref().on("child_added", function(childSnapshot) {
+    database.ref().on("child_added", function(childSnapshot) {
 
     // Log everything that's coming out of snapshot
     console.log(childSnapshot.val().locationName);
