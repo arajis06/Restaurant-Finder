@@ -4,7 +4,9 @@ $("button").on("click", function(event) {
     //clear locations
     $("#result-table").empty();
 
-    // Grabbing and storing the data property value from the button
+
+    // Grabbing and storing the data property value from the button
+
     var location = $("#data-location").val().trim();
 
     // URL and key for MapQuest Geocoding API
@@ -87,3 +89,4 @@ $("button").on("click", function(event) {
 //     messagingSenderId: "532356596825",
 //     appId: "1:532356596825:web:87d4b837e270adec"
 // };
+
