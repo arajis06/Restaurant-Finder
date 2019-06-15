@@ -8,11 +8,12 @@ $("button").on("click", function(event) {
     // Grabbing and storing the data property value from the button
 
     var location = $("#data-location").val().trim();
-
     // URL and key for MapQuest Geocoding API
     // APP ID: G7xVIDYXhT4pqjxrcBFy 
     // APP CODE: CrOqGzcuG4spwb1SS7-YVQ
     var queryURLgeo = "https://geocoder.api.here.com/6.2/geocode.json?app_id=G7xVIDYXhT4pqjxrcBFy&app_code=CrOqGzcuG4spwb1SS7-YVQ&searchtext=" + location;
+
+
 
 
     $.ajax({
@@ -29,12 +30,14 @@ $("button").on("click", function(event) {
     console.log(results.Latitude)
     console.log(results.Longitude)
 
+    var offset = 0;
+
     
 
     // URL and key for Zomato API
     // !!!!! URL may need changed to match search criteria
-    var queryURLzomato = "https://developers.zomato.com/api/v2.1/geocode?lat=" + results.Latitude + "&lon=" + results.Longitude + "&apikey=ae4575e5962528d6786d05daee388045"
-    ;
+    var queryURLzomato = "https://developers.zomato.com/api/v2.1/search?start=" + offset + "&count=10&lat=" + results.Latitude + "&lon=" + results.Longitude + "&apikey=ae4575e5962528d6786d05daee388045"    ;
+
 
     $.ajax({
         url: queryURLzomato,
@@ -44,7 +47,7 @@ $("button").on("click", function(event) {
     .then(function(response2) {
     console.log(response2);
 
-    var results2 = response2.nearby_restaurants
+    var results2 = response2.restaurants
     console.log(results2)
 
 
