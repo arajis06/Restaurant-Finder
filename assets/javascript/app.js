@@ -31,13 +31,13 @@ $("button").on("click", function(event) {
 });
 
   // Firebase watcher + initial loader HINT: .on("value")
-    database.ref().on("value", function(snapshot) {
-
+    database.ref().on("child_added", function(snapshot) {
+      console.log(snapshot.val());
     // Log everything that's coming out of snapshot
     console.log(snapshot.val().locationName);
 
     //change the html to reflect
-    $("#city-display").text("City: " + snapshot.val().locationName);
+    $("#city-display").text(snapshot.val().location);
     console.log(locationName)
 
     // Handle the errors
