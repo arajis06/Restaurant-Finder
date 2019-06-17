@@ -43,7 +43,7 @@ $("button").on("click", function(event) {
     //change the html to reflect
     $("#city-display").text(snapshot.val().location);
     $("#address-display").text(snapshot.val().address);
-    $("#cusine-display").text(snapshot.val().cuisines);
+    $("#cuisine-display").text(snapshot.val().cuisines);
     $("#rating-display").text(snapshot.val().rating);
 
     // Handle the errors
