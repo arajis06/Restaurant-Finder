@@ -6,10 +6,7 @@ $("button").on("click", function(event) {
 
     // Grabbing and storing the data property value from the button
 
-  
     var location = $("#location-input").val().trim();
-
-
     // URL and key for MapQuest Geocoding API
     // APP ID: G7xVIDYXhT4pqjxrcBFy 
     // APP CODE: CrOqGzcuG4spwb1SS7-YVQ
@@ -74,8 +71,8 @@ $("button").on("click", function(event) {
 
                 $("#result-table").append(moreResultsButton)
                 console.log(moreResultsButton)
-            })
-        }
+            })   //close of 2nd .then
+        }   // close of zomato function
 
     zomato();
 
@@ -95,15 +92,12 @@ $("button").on("click", function(event) {
 
     console.log(queryURLdirections)
 
-    })
+    }) //close of .then for 1st ajax call
+})  // close of original button click
 
 
 
-})
-
-
-
-
+// unused firebase _________________________
 // if anyone needs access to the firebase account the email is "acnproject01@gmail.com" pw: gitcheckout01
 // // made that gmail for this project 
 // var firebaseConfig = {
