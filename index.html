@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oh, the Places We Will Go...to Eat!</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Berkshire+Swash|Caveat|Courgette|Damion|Dancing+Script:700|Great+Vibes|Kaushan+Script|Leckerli+One|Lobster|Lobster+Two:700,700i|Norican|Pacifico|Playfair+Display|Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Leckerli+One|Lobster|Lobster+Two:700,700i=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Firebase References -->
@@ -25,7 +25,7 @@
 <body>
 
     <div class = "container">
-        <div class="card main-card card-image mb-3" style="background-image: url('https://i2.wp.com/thefinerthingsintravel.com/wp-content/uploads/2018/07/Blu-Bar-High-Tea-by-Anna-Polyviou-at-Shangri-La-Hotel-Sydney-15lowres.jpg?resize=1020%2C680&ssl=1');">
+        <div class="card main-card card-image mb-3">
             <div class="text-black text-center d-flex justify-content-center align-items-center img-gradient-overlay py-5 px-4">
                 <div class="content">
                     <h1 class="card-title title pt-2 text-center"><strong>Oh, The Places You'll Go...<br>and Eat!</strong></h1>
@@ -47,13 +47,13 @@
         </div>
         
         <div class="row">
-            <div class="col-md-12 col-lg-9">
+            <div class="col-sm-12 col-md-12 col-lg-9">
                 <div class="card resturant-table">
                     <div class ="card-header table-header">
-                        <h2 class ="card-title"><i class="fas fa-utensils "></i> Local Restaurants</h2>
+                        <h2 class ="card-title table-title"><i class="fas fa-utensils "></i> Local Restaurants</h2>
                     </div>
                         <div class ="card-body">
-                            <table class="table table-striped table-hover">
+                            <table class="table table-striped table-responsive table-hover">
                                 <thead>
                                     <tr>
                                         <!-- Added ids so we could set widths in CSS ...even though it didn't work.-->
@@ -74,10 +74,10 @@
       
             <br>
         
-            <div class="col-md-6 col-lg-3">
+            <div class="col-sm-12 col-md-6 col-lg-3">
                 <div class ="card card-default">
                     <div class ="card-header recent-header text-center">
-                        <h2>Previous Search</h2>
+                        <h2 class = "recent-title">Previous Search</h2>
                     </div>
                     <div class ="card-body" id ="recent-location">
                         <h5 id="city-display"></h5>
