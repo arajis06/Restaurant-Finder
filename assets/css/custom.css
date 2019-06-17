@@ -3,11 +3,12 @@ body {
 }
 .main-card {
     margin-top: -45px;
+    background-image: url("../images/headerimg1crop.jpg")
 }
 .title {
     color: #000000; 
-    font-family: 'Lobster Two', cursive;
-    text-shadow: 3px 3px 5px rgb(247, 158, 80);
+    font-family: 'Lobster Two', cursive; 
+     text-shadow: 3px 3px 4px rgb(247, 158, 80); 
     font-size: 45px;
 }
 .card-image {
@@ -32,7 +33,7 @@ h1 {
 p{
     font-weight: bold;
     color: #000000;
-    font-size: 20px;
+    font-size: 18px;
 }
 .food {
     color: white;
@@ -40,7 +41,7 @@ p{
 }
 label {
     color: rgb(247, 158, 80); 
-    text-shadow: 1px 1px 2px #000000;
+    text-shadow: 2px 2px 3px #000000;
     /* font-family: 'Abril Fatface', cursive; */
     font-size: 20px;
 }
@@ -50,14 +51,23 @@ label {
 
 }
 h2 {
-    font-size: 24px;
+    font-size: 22px;
+}
+.table-title {
+    margin-bottom: -5px;
+}
+.recent-title {
+    margin-bottom: -5px;
 }
 .recent-header {
     background-color: rgb(201, 201, 201);
 }
 .table-header {
+
     background-color: rgb(201, 201, 201);
 }
 .table-striped {
     background-color: peachpuff;
 }
+
+

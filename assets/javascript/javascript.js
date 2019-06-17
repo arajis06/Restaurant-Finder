@@ -4,9 +4,7 @@ $("button").on("click", function(event) {
     //clear locations
     $("#result-table").empty();
 
-
     // Grabbing and storing the data property value from the button
-
     var location = $("#location-input").val().trim();
 
     // URL and key for MapQuest Geocoding API
@@ -21,62 +19,70 @@ $("button").on("click", function(event) {
     })
     // After data comes back from the request
     .then(function(response) {
-    console.log(queryURLgeo);
-    console.log(response);
+        console.log(queryURLgeo);
+        console.log(response);
 
-    // storing the data from the AJAX request in the results variable
-    var results = response.Response.View[0].Result[0].Location.NavigationPosition[0]
-    console.log(results.Latitude)
-    console.log(results.Longitude)
+        // storing the data from the AJAX request in the results variable
+        var results = response.Response.View[0].Result[0].Location.NavigationPosition[0]
+        console.log(results.Latitude)
+        console.log(results.Longitude)
 
-    
+        var offset = 0;
 
-    // URL and key for Zomato API
-    // !!!!! URL may need changed to match search criteria
-    var queryURLzomato = "https://developers.zomato.com/api/v2.1/geocode?lat=" + results.Latitude + "&lon=" + results.Longitude + "&apikey=ae4575e5962528d6786d05daee388045"
-    ;
+        // URL and key for Zomato API
+        function zomato() {
+            // !!!!! URL may need changed to match search criteria
+            var queryURLzomato = "https://developers.zomato.com/api/v2.1/search?start=" + offset + "&count=10&lat=" + results.Latitude + "&lon=" + results.Longitude + "&apikey=ae4575e5962528d6786d05daee388045";
 
-    $.ajax({
-        url: queryURLzomato,
-        method: "GET"
+
+            $.ajax({
+                url: queryURLzomato,
+                method: "GET"
+            })
+            // After data comes back from the request
+            .then(function(response2) {
+                console.log(response2);
+
+                var results2 = response2.restaurants
+                console.log(results2)
+
+                for (var i = 0; i < results2.length; i++) {
+            
+                    var newRow = $("<tr>").append(
+                        $("<td>").text(results2[i].restaurant.name),
+                        $("<td>").text(results2[i].restaurant.location.address),
+                        $("<td>").text(results2[i].restaurant.cuisines),
+                        $("<td>").text(results2[i].restaurant.user_rating.aggregate_rating),
+                        $("<td>").html("<a href=" + results2[i].restaurant.menu_url + ">Menu</a>"),
+                    );
+                                    
+                    // Append the new row to the table
+                    $("#result-table").append(newRow);
+                }
+                    // when More Results button is clicked, the next 10 restaurants are added to the list
+                var moreResultsButton = $("<button>").text("More Results")
+                moreResultsButton.on("click", function(){
+                    offset += 10;
+                    zomato();
+                    $("#result-table").append(newRow);
+                    moreResultsButton.hide();
+                })
+
+
+                $("#result-table").append(moreResultsButton)
+                console.log(moreResultsButton)
+                        })
+                    }
+     zomato();
+
     })
-    // After data comes back from the request
-    .then(function(response2) {
-    console.log(response2);
-
-    var results2 = response2.nearby_restaurants
-    console.log(results2)
 
 
-        for (var i = 0; i < results2.length; i++) {
-            // console.log(results2[i].restaurant.name)
-            // $("#name").append(results2[i].restaurant.name)
-            // console.log(results2[i].restaurant.location.address)
-            // $("#address").append(results2[i].restaurant.location.address)
-            // console.log(results2[i].restaurant.cuisines)
-            // $("#cuisines").append(results2[i].restaurant.cuisines)
-            // console.log(results2[i].restaurant.menu_url)
-            // $("#menu-url").append(results2[i].restaurant.menu_url)
-            // console.log(results2[i].restaurant.url)
-            // $("#restaurant-url").append(results2[i].restaurant.url)
-            // console.log(results2[i].restaurant.user_rating.aggregate_rating)
-            // $("#rating").append(results2[i].restaurant.user_rating.aggregate_rating)
-     
 
-        var newRow = $("<tr>").append(
-            $("<td>").text(results2[i].restaurant.name),
-            $("<td>").text(results2[i].restaurant.location.address),
-            $("<td>").text(results2[i].restaurant.cuisines),
-            $("<td>").text(results2[i].restaurant.user_rating.aggregate_rating),
-            $("<td>").html("<a href=" + results2[i].restaurant.menu_url + ">Menu</a>"),
-            );
-                            
-            // Append the new row to the table
-            $("#result-table").append(newRow);
-        }
-    })
 })
-})
+
+
+
 
 // if anyone needs access to the firebase account the email is "acnproject01@gmail.com" pw: gitcheckout01
 // // made that gmail for this project 
@@ -88,5 +94,4 @@ $("button").on("click", function(event) {
 //     storageBucket: "acn-bootcamp-project-01.appspot.com",
 //     messagingSenderId: "532356596825",
 //     appId: "1:532356596825:web:87d4b837e270adec"
-// };
-
+// }
