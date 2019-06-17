@@ -5,7 +5,10 @@ $("button").on("click", function(event) {
     $("#result-table").empty();
 
     // Grabbing and storing the data property value from the button
+
+  
     var location = $("#location-input").val().trim();
+
 
     // URL and key for MapQuest Geocoding API
     // APP ID: G7xVIDYXhT4pqjxrcBFy 
@@ -71,9 +74,26 @@ $("button").on("click", function(event) {
 
                 $("#result-table").append(moreResultsButton)
                 console.log(moreResultsButton)
-                        })
-                    }
-     zomato();
+            })
+        }
+
+    zomato();
+
+// make a directions link for each 
+// when you press the directions link:
+// 1. enter your current location into an input field that opens
+// 2. end location pulls from results2[i].restaurant.location.address of restaurant clicked on.
+// 3. results get put into query URL
+// 4. hide table, recent searches, and search fields
+// 5. display direction results on page in place of table
+
+
+    var startRoute = $("#start-route").val().trim();
+    var endRoute = results2[i].restaurant.location.address
+
+    var queryURLdirections = "https://www.mapquestapi.com/directions/v2/route?key=KEY&from=115+Pope+Lane+Duncansville+PA&to=932+Freeport+Rd%2C+Pittsburgh+15238&outFormat=json&ambiguities=ignore&routeType=fastest&doReverseGeocode=false&enhancedNarrative=false&avoidTimedConditions=false"
+
+    console.log(queryURLdirections)
 
     })
 

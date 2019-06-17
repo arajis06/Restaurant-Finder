@@ -40,7 +40,7 @@ p{
     text-shadow: 1px 1px 2px #000000;
 }
 label {
-    color: #000000); 
+    color: #000000; 
     text-shadow: 2px 2px 3px rgb(247, 158, 80) ;
     /* font-family: 'Abril Fatface', cursive; */
     font-size: 20px;
@@ -72,5 +72,4 @@ h2 {
 .table-striped {
     background-color: peachpuff;
 }
-
 
