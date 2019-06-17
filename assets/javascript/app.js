@@ -13,38 +13,32 @@ var firebaseConfig = {
 // Get a reference to the database service
 var database = firebase.database();
 
-var city = "";
-var address = "";
-var cuisines = "";
-var rating = 0;
+var locationName = "";
 
 // Capture Button Click
 $("button").on("click", function(event) {
-    // Don't refresh the page!
+    // This means Don't refresh the page!
     event.preventDefault();
 
     // Capture user inputs and store them into variables
-    city = $("#data-location").val().trim();
+    locationName = $("#location-input").val().trim();
 
-    console.log(city);
+    console.log(locationName);
 
     database.ref().push({
-      location: city
+      location: locationName
     });
 });
 
   // Firebase watcher + initial loader HINT: .on("value")
-  //database.ref().on("child_added", function(childSnapshot) {
     database.ref().on("value", function(snapshot) {
 
     // Log everything that's coming out of snapshot
-    console.log(snapshot.val().location);
+    console.log(snapshot.val().locationName);
 
     //change the html to reflect
-    $("#city-display").text(snapshot.val().location);
-    $("#address-display").text(snapshot.val().address);
-    $("#cusine-display").text(snapshot.val().cuisines);
-    $("#rating-display").text(snapshot.val().rating);
+    $("#city-display").text("City: " + snapshot.val().locationName);
+    console.log(locationName)
 
     // Handle the errors
   }, function(errorObject) {
