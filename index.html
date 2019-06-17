@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oh, the Places We Will Go...to Eat!</title>
 
-      <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Berkshire+Swash|Caveat|Courgette|Damion|Dancing+Script:700|Great+Vibes|Kaushan+Script|Leckerli+One|Lobster|Lobster+Two:700,700i|Norican|Pacifico|Playfair+Display|Satisfy&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Firebase References -->
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
@@ -15,10 +16,8 @@
     <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
     <!--Bootstrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!--MDbootstrap-->
+     <!--MDbootstrap-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" />
-
     <!--Custom CSS-->
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 </head>
@@ -27,30 +26,32 @@
 
     <div class = "container">
         <div class="card main-card card-image mb-3" style="background-image: url('https://i2.wp.com/thefinerthingsintravel.com/wp-content/uploads/2018/07/Blu-Bar-High-Tea-by-Anna-Polyviou-at-Shangri-La-Hotel-Sydney-15lowres.jpg?resize=1020%2C680&ssl=1');">
-          <div class="text-black text-center d-flex justify-content-center align-items-center img-gradient-overlay py-5 px-4">
-              <div class="content">
-                  <h1 class="card-title pt-2 text-center"><strong>Oh, The Places You'll Go...<br>and Eat!</strong></h1>
-                  <p>Are you a <strong>FOODIE</strong> who likes to travel and explore your tastebuds?<br> Think of all the amazing resturants you can explore and experience their top cuisines!<br> Let's explore together!</p>
-                      <form>
-                          <div class="form-group">
-                              <!--User Input-->
-                              <label for="location"><strong>Enter a Location</strong></label>
-                              <input type="text" class="form-control" id="data-location">
-                              <br>
-                              <!--Search Button-->
-                              <button type="submit" class="btn btn-deep-orange waves-effect waves-light">Search</button>
+            <div class="text-black text-center d-flex justify-content-center align-items-center img-gradient-overlay py-5 px-4">
+                <div class="content">
+                    <h1 class="card-title title pt-2 text-center"><strong>Oh, The Places You'll Go...<br>and Eat!</strong></h1>
+                        <form>
+                            <div class="form-group">
+                                <!--User Input-->
+                                <label for="location-input"><strong>Explore a Location</strong></label>
+                                <input type="text" class="form-control" id="location-input">
+                                <br>
+                                <!--Search Button-->
+                                <button type="submit" class="btn btn-deep-orange waves-effect waves-light">Search</button>
                             </div>
                       </form>
                 </div>
-          </div>
-      </div>
+            </div>
+        </div>
+        <div class = "paragraph text-center">
+        <p>Are you a <strong class ="food">FOODIE</strong> who likes to travel and explore your tastebuds?<br> Think of all the amazing cuisines you can experience at top resturants in that area.<br> Let's explore together!</p>
+        </div>
         
-      <div class="row">
-          <div class="col-md-12 col-lg-9">
-              <div class="card resturant-table">
-                  <div class ="card-header table-header">
-                      <h4 class ="card-title"><i class="fas fa-utensils "></i> Local Restaurants</h4>
-                  </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-9">
+                <div class="card resturant-table">
+                    <div class ="card-header table-header">
+                        <h2 class ="card-title"><i class="fas fa-utensils "></i> Local Restaurants</h2>
+                    </div>
                         <div class ="card-body">
                             <table class="table table-striped table-hover">
                                 <thead>
@@ -70,30 +71,31 @@
                         </div>
                 </div>
             </div><!--col end-->
-        <!--</div>row end-->
-        <br>
-        <!--<div class = "row">-->
+      
+            <br>
+        
             <div class="col-md-6 col-lg-3">
-                   <div class ="card card-default">
-                       <div class ="card-header recent-header text-center">
-                           <h4>Previous Search</h4>
-                       </div>
-                       <div class ="card-body" id ="recent-location">
-                           <h3 id="city-display"></h3>
-                           <p id ="address-display"></p>
-                           <h4 id ="cuisine-display"></h4>
-                           <h4 id ="rating-display"></h4>
-                       </div>
-                   </div>    
-               </div><!--col end-->
-           </div><!--row end-->
-       </div><!--col end-->
-       </div><!--row end-->
-    
+                <div class ="card card-default">
+                    <div class ="card-header recent-header text-center">
+                        <h2>Previous Search</h2>
+                    </div>
+                    <div class ="card-body" id ="recent-location">
+                        <h5 id="city-display"></h5>
+                    </div>
+                </div>    
+            </div><!--col end-->
+        </div><!--row end-->
+        
     </div><!--Main container end-->
-    
+ 
+
+
+    <!-- SCRIPTS -->
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
 
     <!-- Javascript link -->
     <script src="assets/javascript/javascript.js"></script>
@@ -102,10 +104,6 @@
      <script src="assets/javascript/app.js"></script>
 
 
-  <!-- SCRIPTS -->
-  <!-- MDB core JavaScript -->
-
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
 </body>
 </html>
 

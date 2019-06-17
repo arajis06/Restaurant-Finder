@@ -7,7 +7,7 @@ $("button").on("click", function(event) {
 
     // Grabbing and storing the data property value from the button
 
-    var location = $("#data-location").val().trim();
+    var location = $("#location-input").val().trim();
 
     // URL and key for MapQuest Geocoding API
     // APP ID: G7xVIDYXhT4pqjxrcBFy 
