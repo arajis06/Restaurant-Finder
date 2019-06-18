@@ -6,8 +6,8 @@ Theme: Oh, The PLaces We'll Go...and Eat!
 
 LINK: https://conniepope.github.io/Project-1/
 
-Are you a FOODIE or just someome who enjoys traveling? Explore local restaurants and your tastebuds on your journey.
-Think of all the amazing cuisines you can experience instead of settling for hotel room service. 
+Are you a FOODIE who likes to travel and explore your tastebuds?
+Think of all the amazing cuisines you can experience at top resturants in that area.
 Let's explore together!
 
 Overview
