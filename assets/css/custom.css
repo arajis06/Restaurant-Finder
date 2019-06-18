@@ -3,13 +3,13 @@ body {
 }
 .main-card {
     margin-top: -45px;
-    background-image: url("../images/headerimg1crop.jpg")
+    background-image: url("../images/headerimg1cropagain.jpg")
 }
 .title {
-    color: white; 
+    color: #ffffff; 
     font-family: 'Lobster Two', cursive; 
      text-shadow: 3px 3px 4px rgb(247, 158, 80); 
-    font-size: 55px;
+    font-size: 50px;
 }
 .card-image {
     background-repeat: no-repeat;
@@ -25,7 +25,7 @@ body {
     margin-left: 35%;
 }
 .form-group {
-    margin-top: 30px;
+    margin: 50px 20px 0;
 }
 h1 {
     font-weight: 600;
@@ -40,10 +40,10 @@ p{
     text-shadow: 1px 1px 2px #000000;
 }
 label {
-    color: #000000; 
-    text-shadow: 2px 2px 3px rgb(247, 158, 80) ;
+    color: rgb(255, 165, 86); 
+    text-shadow: 2px 2px 3px #000000 ;
     /* font-family: 'Abril Fatface', cursive; */
-    font-size: 20px;
+    font-size: 18px;
 }
 .resturant-table {
     max-width: 100%;
@@ -56,10 +56,12 @@ h2 {
 .table-title {
     margin-bottom: -5px;
     font-weight: bold;
+    padding: 10px 0;
 }
 .recent-title {
     margin-bottom: -5px;
     font-weight: bold;
+    padding: 10px 0;
 }
 .recent-header {
     background-color: rgb(201, 201, 201);
@@ -71,5 +73,8 @@ h2 {
 }
 .table-striped {
     background-color: peachpuff;
+}
+th {
+    font-weight: bold;
 }
 

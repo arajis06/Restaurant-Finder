@@ -34,11 +34,11 @@ $("button").on("click", function(event) {
     database.ref().on("child_added", function(snapshot) {
       console.log(snapshot.val());
     // Log everything that's coming out of snapshot
-    console.log(snapshot.val().locationName);
+    console.log(snapshot.val().location);
 
     //change the html to reflect
     $("#city-display").text(snapshot.val().location);
-    console.log(locationName)
+    console.log(location)
 
     // Handle the errors
   }, function(errorObject) {
