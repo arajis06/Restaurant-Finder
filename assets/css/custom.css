@@ -73,3 +73,9 @@ h2 {
     background-color: peachpuff;
 }
 
+@media (max-width: 767.98px) { 
+
+    .container {
+    max-width: 100%;
+    }
+}
