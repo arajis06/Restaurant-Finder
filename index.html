@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oh, the Places We Will Go...to Eat!</title>
-
+    <!--Google Font-->
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Leckerli+One|Lobster|Lobster+Two:700,700i=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -43,20 +43,21 @@
             </div>
         </div>
         <div class = "paragraph text-center">
-        <p>Are you a <strong class ="food">FOODIE</strong> who likes to travel and explore your tastebuds?<br> Think of all the amazing cuisines you can experience at top resturants in that area.<br> Let's explore together!</p>
+        <p>Are you a <strong class ="food">FOODIE</strong> who likes to travel and explore your tastebuds?<br> Think of all the amazing cuisines you can experience at top restaurants in that area.<br> Let's explore together!</p>
         </div>
         
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-9">
                 <div class="card resturant-table">
-                    <div class ="card-header table-header">
+                    <div class ="card-header table-header gradient-card-header peach-gradient narrower">
                         <h2 class ="card-title table-title"><i class="fas fa-utensils "></i> Local Restaurants</h2>
                     </div>
                         <div class ="card-body">
-                            <table class="table table-striped table-responsive table-hover">
+                            <table id="get-table" class="table table-striped table-responsive-{-sm} table-hover">
                                 <thead>
-                                    <tr>
+                                    <tr class = "text-center">
                                         <!-- Added ids so we could set widths in CSS ...even though it didn't work.-->
+                                        <th id="thumbnail" scope="col">Photo</th>
                                         <th id="name" scope="col">Name</th>
                                         <th id="address" scope="col">Address</th>
                                         <th id="cuisines" scope="col">Cuisines</th>
@@ -76,10 +77,10 @@
         
             <div class="col-sm-12 col-md-6 col-lg-3">
                 <div class ="card card-default">
-                    <div class ="card-header recent-header text-center">
+                    <div class ="card-header recent-header text-center gradient-card-header peach-gradient narrower">
                         <h2 class = "recent-title">Previous Search</h2>
                     </div>
-                    <div class ="card-body" id ="recent-location">
+                    <div class ="card-body text-center" id ="recent-location">
                         <h5 id="city-display"></h5>
                     </div>
                 </div>    
