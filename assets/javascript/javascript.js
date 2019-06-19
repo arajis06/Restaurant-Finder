@@ -52,7 +52,7 @@ $("button").on("click", function(event) {
                 for (var i = 0; i < results2.length; i++) {
             
                     var newRow = $("<tr>").append(
-                        $("<td>").html("<img class=img-fluid img-thumbnail src= " + results2[i].restaurant.thumb +">Photo</>" ),
+                        $("<td>").html("<img class=img-fluid img-thumbnail src= " + results2[i].restaurant.thumb +"></>" ),
                         $("<td>").text(results2[i].restaurant.name),
                         $("<td>").text(results2[i].restaurant.location.address),
                         $("<td>").text(results2[i].restaurant.cuisines),
