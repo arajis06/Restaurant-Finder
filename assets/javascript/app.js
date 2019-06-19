@@ -6,9 +6,9 @@ var firebaseConfig = {
     storageBucket: "project-1-b75e9.appspot.com",
     messagingSenderId: "782607092533",
     appId: "1:782607092533:web:a50d6049c4f7f174"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 // Get a reference to the database service
 var database = firebase.database();
@@ -31,7 +31,7 @@ $("button").on("click", function(event) {
 });
 
   // Firebase watcher + initial loader HINT: .on("value")
-    database.ref().on("child_added", function(snapshot) {
+  database.ref().on("child_added", function(snapshot) {
       console.log(snapshot.val());
     // Log everything that's coming out of snapshot
     console.log(snapshot.val().location);
