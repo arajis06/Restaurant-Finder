@@ -76,17 +76,17 @@ $("button").on("click", function(event) {
                 $("#result-table").append(moreResultsButton)
                 console.log(moreResultsButton)
             })
-            }
+        }
 
     zomato();
 
-// make a directions link for each 
-// when you press the directions link:
-// 1. enter your current location into an input field that opens
-// 2. end location pulls from results2[i].restaurant.location.address of restaurant clicked on.
-// 3. results get put into query URL
-// 4. hide table, recent searches, and search fields
-// 5. display direction results on page in place of table
+    // make a directions link for each 
+    // when you press the directions link:
+    // 1. enter your current location into an input field that opens
+    // 2. end location pulls from results2[i].restaurant.location.address of restaurant clicked on.
+    // 3. results get put into query URL
+    // 4. hide table, recent searches, and search fields
+    // 5. display direction results on page in place of table
 
 
     var startRoute = $("#start-route").val().trim();
@@ -100,7 +100,7 @@ $("button").on("click", function(event) {
 
 
 
- })
+})
 
 
 
