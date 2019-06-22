@@ -2,7 +2,7 @@
 ## Creators: Connie Pope, Alexis Rajis and Nam Truong
 #### Type of Application: Restaurant Finder/APIs
 
-### Theme: Oh, The PLaces We'll Go...and Eat!
+### Title: Oh, The PLaces We'll Go...and Eat!
 
 #### LINK: https://conniepope.github.io/Project-1/
 
@@ -16,7 +16,7 @@ In this restaurant finder application, users can input a location and find local
 
 ![screenshot-project1](https://user-images.githubusercontent.com/49252572/59732541-b5e40200-9218-11e9-8cd8-fa7891609b56.png)
 
-- Technologies Used:
+#### Technologies Used:
 - MapQuest API
 - Zomato API 
 - HTML5 
