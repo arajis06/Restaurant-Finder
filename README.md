@@ -27,5 +27,5 @@ In this restaurant finder application, users can input a location and find local
 - Mdbootstrap  
 - Firebase 
 - GitHub
-- GooleFonts
+- GoolgeFonts
 - FontAwesome
