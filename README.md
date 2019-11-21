@@ -1,5 +1,6 @@
-# Project-1
-## Creators: Connie Pope, Alexis Rajis and Nam Truong
+# Restaurant Finder
+## Project-1
+### Creators: Connie Pope, Alexis Rajis and Nam Truong
 #### Type of Application: Restaurant Finder/APIs
 
 ### Title: Oh, The PLaces We'll Go...and Eat!
